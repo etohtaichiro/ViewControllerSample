@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 final class SecondViewController: UIViewController {
+
     let titleName: String
     
     init(titleName: String) {
@@ -29,6 +30,14 @@ final class SecondViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = titleName
         self.view.addSubview(container)
+
+        // スクリーンの横縦幅
+        let screenWidth:CGFloat = self.view.frame.width
+        let screenHeight:CGFloat = self.view.frame.height
+        
+        // ボタンの位置とサイズを設定
+        container.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+
         //container.snp.makeConstraints { make in
         //    make.edges.equalToSuperview()
         //}
@@ -38,4 +47,5 @@ final class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 }

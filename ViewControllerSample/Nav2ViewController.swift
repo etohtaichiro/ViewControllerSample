@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 final class Nav2ViewController: UIViewController {
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
@@ -28,13 +29,14 @@ final class Nav2ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 }
 
 extension Nav2ViewController: UITableViewDelegate {
-    
 }
 
 extension Nav2ViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
@@ -42,4 +44,5 @@ extension Nav2ViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
+
 }
